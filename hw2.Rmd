@@ -56,13 +56,13 @@ response <-response[-emptyId4]
 alldata <- data.frame(title, author, path, date, response)
 
 write.table(alldata,"pttjapanstudy.csv") 
-
 ```
 
 
 ## Step 2: 匯出表單
 
 ```{r}
+library(knitr)
 data = read.table("pttjapanstudy.csv")
-read.table("pttjapanstudy.csv", header = TRUE, row.names = 1)
+kable(data)
 ```

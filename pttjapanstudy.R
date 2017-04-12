@@ -46,4 +46,6 @@ alldata <- data.frame(title, author, path, date, response)
 
 write.table(alldata,"pttjapanstudy.csv") 
 
+library(knitr)
 data = read.table("pttjapanstudy.csv")
+kable(data)
